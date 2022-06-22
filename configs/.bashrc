@@ -129,6 +129,12 @@ alias p3='python3'
 alias cd='cd -P'
 alias lt='ls -t1'
 alias glogv='git log --name-only'
+
+if command -v youtube-dl &>/dev/null
+then
+    alias ytdl='youtube-dl -x --audio-format=m4a'
+fi
+
 # Safety first
 alias cp='cp -n'
 alias rm='rm -I'
