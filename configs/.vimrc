@@ -1,4 +1,4 @@
-source /etc/vim/vimrc
+source $VIMRUNTIME/defaults.vim
 
 filetype on
 filetype plugin on
