@@ -117,11 +117,16 @@ if ! shopt -oq posix; then
 fi
 
 alias toenvs='source ~/.virtualenvs/google_jax_cpu/bin/activate'
+alias togpu='source ~/.virtualenvs/google_jax/bin/activate'
 alias p3='python3'
 alias cd='cd -P'
+alias lt='ls -t1'
+alias glogv='git log --name-only'
+# Safety first
+alias cp='cp -n'
+alias rm='rm -I'
 
 # Environment variable things
 export PYTHONPATH=/home/gpeery/SURROGATE_MODELING/dax-master:/home/gpeery/SURROGATE_MODELING/ml_nurbs:$PYTHONPATH
-export PATH=$PATH:~/bin
 # Colors :)
 export TERM=xterm-256color

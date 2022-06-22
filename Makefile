@@ -1,4 +1,4 @@
-ALL_CONFIGS=~/.bashrc ~/.vimrc ~/.tmux.conf
+ALL_CONFIGS=~/.bashrc ~/.vimrc ~/.tmux.conf ~/.profile
 DIRS=~/bin
 
 all: $(ALL_CONFIGS) $(DIRS)
@@ -10,6 +10,9 @@ all: $(ALL_CONFIGS) $(DIRS)
 	ln $< $@
 
 ~/.tmux.conf: configs/.tmux.conf
+	ln $< $@
+
+~/.profile: configs/.profile
 	ln $< $@
 
 ~/bin: $(realpath bin)
