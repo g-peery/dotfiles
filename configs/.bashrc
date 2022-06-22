@@ -116,6 +116,13 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# On WSL, don't want to deal with crazy path
+if grep --qi microsoft /proc/version; then
+    export PATH=$(echo "$PATH" | sed -e 's/:\/mnt[^:]*//g') # strip out problematic Windows %PATH%
+fi
+
+alias mtfs='sudo sshfs -o allow_other,default_permissions gpeery@10.157.9.56:/home/gpeery/SURROGATE_MODELING/Flat_sheet/Results mntd'
+alias mt='sudo sshfs -o allow_other,default_permissions gpeery@10.157.9.56:/home/gpeery/SURROGATE_MODELING/AV-NNFESM/Results mntd'
 alias toenvs='source ~/.virtualenvs/google_jax_cpu/bin/activate'
 alias togpu='source ~/.virtualenvs/google_jax/bin/activate'
 alias p3='python3'
