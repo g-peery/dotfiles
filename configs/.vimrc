@@ -13,6 +13,6 @@ set expandtab
 
 set autoindent
 
-autocmd FileType python set colorcolumn=73,80
+autocmd FileType python set colorcolumn=72,80
 
 autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
