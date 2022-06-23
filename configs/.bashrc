@@ -117,7 +117,7 @@ if ! shopt -oq posix; then
 fi
 
 # On WSL, don't want to deal with crazy path
-if grep --qi microsoft /proc/version; then
+if grep -qi microsoft /proc/version; then
     export PATH=$(echo "$PATH" | sed -e 's/:\/mnt[^:]*//g') # strip out problematic Windows %PATH%
 fi
 

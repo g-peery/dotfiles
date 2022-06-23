@@ -20,5 +20,5 @@ all: $(ALL_CONFIGS) $(DIRS)
 
 clean:
 	rm -f $(ALL_CONFIGS)
-	rm -r $(DIRS)
+	rm -rf $(DIRS)
     
