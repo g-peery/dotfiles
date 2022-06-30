@@ -137,7 +137,7 @@ then
 fi
 
 # Safety first
-alias cp='cp -n'
+alias cp='cp -i'
 alias rm='rm -I'
 
 # Environment variable things
