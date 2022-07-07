@@ -123,6 +123,8 @@ fi
 
 alias mtfs='sudo sshfs -o allow_other,default_permissions gpeery@10.157.9.56:/home/gpeery/SURROGATE_MODELING/Flat_sheet/Results mntd'
 alias mt='sudo sshfs -o allow_other,default_permissions gpeery@10.157.9.56:/home/gpeery/SURROGATE_MODELING/AV-NNFESM/Results mntd'
+alias mtgpu='sudo sshfs -o allow_other,default_permissions gpeery@10.157.9.56:/home/gpuers/SURROGATE_MODELING/AV-NNFESM/Results gpumnt'
+alias mtfenics='sudo sshfs -o allow_other,default_permissions gpeery@10.157.9.56:/home/gpeery/tIGAr/tIGAr_results fenicsmnt'
 alias toenvs='source ~/.virtualenvs/google_jax_cpu/bin/activate'
 alias togpu='source ~/.virtualenvs/google_jax/bin/activate'
 alias p3='python3'
