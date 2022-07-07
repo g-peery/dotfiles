@@ -1,7 +1,11 @@
 ALL_CONFIGS=~/.bashrc ~/.vimrc ~/.tmux.conf ~/.profile
-DIRS=~/bin
+GROUPS=bin_m
+BIN_CONTENTS=$(wildcard bin/*)
 
-all: $(ALL_CONFIGS) $(DIRS)
+all: $(ALL_CONFIGS) $(GROUPS)
+
+bin_m: $(BIN_CONTENTS)
+	cp $^ ~/bin/
 
 ~/.bashrc: configs/.bashrc
 	ln $< $@
@@ -15,10 +19,6 @@ all: $(ALL_CONFIGS) $(DIRS)
 ~/.profile: configs/.profile
 	ln $< $@
 
-~/bin: $(realpath bin)
-	ln -s $< $@
-
 clean:
 	rm -f $(ALL_CONFIGS)
-	rm -rf $(DIRS)
     
