@@ -21,4 +21,5 @@ bin_m: $(BIN_CONTENTS)
 
 clean:
 	rm -f $(ALL_CONFIGS)
+	mkdir -p ~/bin
     
