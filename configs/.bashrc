@@ -131,6 +131,7 @@ alias p3='python3'
 alias cd='cd -P'
 alias lt='ls -t1'
 alias glogv='git log --name-only'
+alias g='git'
 
 if command -v youtube-dl &>/dev/null
 then
@@ -138,7 +139,7 @@ then
 fi
 
 # Safety first
-alias cp='cp -n'
+alias cp='cp -i'
 alias rm='rm -I'
 
 # Environment variable things
