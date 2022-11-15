@@ -1,0 +1,3 @@
+#!/bin/bash
+
+montage $(find . -regextype egrep -regex "\./[0-9]+.*png") -tile $1 -geometry +1+1 $2
