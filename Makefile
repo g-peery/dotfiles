@@ -11,6 +11,7 @@ bin_m: $(BIN_CONTENTS)
 	ln $< $@
 
 ~/.vimrc: configs/.vimrc
+	configs/prep_theme.sh
 	ln $< $@
 
 ~/.tmux.conf: configs/.tmux.conf

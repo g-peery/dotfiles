@@ -1,5 +1,9 @@
 source $VIMRUNTIME/defaults.vim
 
+packadd! dracula
+syntax enable
+colorscheme dracula
+
 filetype on
 filetype plugin on
 filetype indent on " file type based indentation
