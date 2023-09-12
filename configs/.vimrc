@@ -22,3 +22,5 @@ autocmd BufNewFile,BufRead *.py.m4 set filetype=python
 autocmd FileType python set colorcolumn=72,80
 
 autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
+
+autocmd FileType lua set colorcolumn=80

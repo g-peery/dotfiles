@@ -134,10 +134,15 @@ alias glogv='git log --name-only'
 alias g='git'
 alias greppyr='grep -r --include=\*.py'
 
-if command -v youtube-dl &>/dev/null
+if command -v yt-dlp &>/dev/null
 then
-    alias ytdl='youtube-dl -x --audio-format=m4a'
+    alias ytdl='yt-dlp -x --audio-format=m4a'
 fi
+#if command -v youtube-dl &>/dev/null
+#then
+    #alias ytdl='youtube-dl -x --audio-format=m4a'
+    #alias ytdl_playlist='ytdl -o "%(playlist_index)02d - %(title)s-%(id)s.%(ext)s"'
+#fi
 
 # Safety first
 alias cp='cp -i'
