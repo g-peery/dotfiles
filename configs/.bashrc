@@ -133,6 +133,16 @@ alias lt='ls -t1'
 alias glogv='git log --name-only'
 alias g='git'
 alias greppyr='grep -r --include=\*.py'
+alias clipboard='xsel -ib'
+alias ls6='ssh gpeery@ls6.tacc.utexas.edu'
+alias get_results='scp -r gpeery@ls6.tacc.utexas.edu:/work/09641/gpeery/ls6/results/* ~/research/nnfe_results/'
+alias o365='open https://office365.austin.utexas.edu/'
+
+if [ -d $HOME/.pyenv ]; then
+    export PYENV_ROOT="$HOME/.pyenv"
+    command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init -)"
+fi
 
 if command -v yt-dlp &>/dev/null
 then

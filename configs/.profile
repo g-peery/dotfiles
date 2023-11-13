@@ -29,5 +29,15 @@ if [ "$PATHS" != "true" ]; then
     if [ -d "$HOME/.local/bin" ] ; then
         PATH="$HOME/.local/bin:$PATH"
     fi
+
+    # Add go stuff if there
+    if [ -d "/usr/local/go" ] ; then
+        PATH=$PATH:/usr/local/go/bin
+    fi
 fi
 
+if [ -d $HOME/.pyenv ]; then
+    export PYENV_ROOT="$HOME/.pyenv"
+    command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init -)"
+fi
