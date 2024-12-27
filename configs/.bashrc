@@ -143,6 +143,9 @@ if [ -d $HOME/.pyenv ]; then
     command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
     eval "$(pyenv init -)"
 fi
+if command -v pyenv-virtualenv &>/dev/null; then
+    eval "$(pyenv virtualenv-init -)"
+fi
 
 if command -v yt-dlp &>/dev/null
 then
@@ -162,3 +165,26 @@ alias rm='rm -I'
 export PYTHONPATH=/home/gpeery/SURROGATE_MODELING/dax-master:/home/gpeery/SURROGATE_MODELING/ml_nurbs:$PYTHONPATH
 # Colors :)
 export TERM=xterm-256color
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/gpeery/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/gpeery/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/gpeery/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/gpeery/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+if command -v ruby &>/dev/null
+then
+    # Install Ruby Gems to ~/gems
+    export GEM_HOME="$HOME/gems"
+    export PATH="$HOME/gems/bin:$PATH"
+fi
+
